@@ -1,21 +1,31 @@
 /* Put your code here */
 .grid {
     display: grid;
-
-    grid-template: 100px 200px / 200px auto 150px;
-    /* grid-row-gap: 10px;
-    grid-column-gap: 10px; */
-    grid-gap: 10px 30px;
+    grid-template-rows: 60px 240px 120px;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
 }
 
-.grid div:nth-child(6) {
-    order: -1;
+.header {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 3;
+    background-color: #263238;
 }
 
-.grid div:nth-child(3) {
-    order: 1;
+.main {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+    background-color: #cccfd1;
 }
 
-.grid div:nth-child(2) {
-    order: 2;
+.sidebar {
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+    background-color: #afb8bc;
+}
+
+.footer {
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 3;
+    background-color: #67676f;
 }
