@@ -1,18 +1,18 @@
 /* Put your code here */
 .grid {
     display: grid;
-    grid: 200px 200px / 1fr 1fr 1fr;
+    grid: 200px 200px / 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
+    position: relative;
 }
 
-.three {
-    grid-row: 1;
-    grid-column: 1 / span 2;
-    background-color: rgba(0, 0, 80, 0.7);
-    z-index: 1;
-}
-.four {
-    grid-row: 1;
+.highlighter {
+    position: absolute;
+    grid-row: 2;
     grid-column: 2 / span 2;
-    background-color: rgba(80, 0, 0, 0.7);
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    background-color: rgba(200, 250, 50, 0.3);
+    top: -5px;
+    left: -5px;
 }
